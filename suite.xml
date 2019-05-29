@@ -1,0 +1,7 @@
+<suite name="cucumberRunner">
+	<test name="suite">
+		<classes>
+			<class name="cucumberRunner.testRunner" />
+		</classes>
+	</test>
+</suite>
