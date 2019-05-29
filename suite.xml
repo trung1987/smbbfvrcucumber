@@ -1,4 +1,6 @@
-<suite name="cucumberRunner">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="cucumberRunner" verbose="1">
 	<test name="suite">
 		<classes>
 			<class name="cucumberRunner.testRunner" />
