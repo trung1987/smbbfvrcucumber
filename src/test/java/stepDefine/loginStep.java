@@ -25,6 +25,7 @@ public class loginStep {
 		login = new LoginAction(driver);
 		login.openBrowser();
 	}
+	
 
 	@When("^I input correct \"([^\"]*)\" and \"([^\"]*)\"$")
 	public void i_input_correct_username_and_password(String username, String password) throws Throwable {
