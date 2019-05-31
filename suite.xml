@@ -2,6 +2,7 @@
 
 <suite name="cucumberRunner" verbose="1">
 	<test name="suite">
+	<parameter name="browser"  value="Chrome"/>
 		<classes>
 			<class name="cucumberRunner.testRunner" />
 		</classes>

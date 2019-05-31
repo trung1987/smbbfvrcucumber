@@ -5,6 +5,7 @@
 	<groupId>com.maven.cucumber</groupId>
 	<artifactId>cucumberRunner</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
  <repositories>
 	  <repository>
 	    <id>com.sikulix</id>
@@ -235,7 +236,12 @@
 		    <artifactId>cucumber-html</artifactId>
 		    <version>0.2.6</version>
 		</dependency>
-						
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>1.2.5</version>
+		</dependency>				
 	</dependencies>
 
 	<licenses>
