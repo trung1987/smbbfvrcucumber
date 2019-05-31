@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import Actions.LoginAction;
+import Interface.LoginInterface;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -38,7 +39,7 @@ public class loginStep {
 	@Then("^I login success$")
 	public void i_login_success() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		String cusName = "//a[@title='Jay Nguyen']";
+		
 		Method method = new Method();
 
 		try {
@@ -47,7 +48,7 @@ public class loginStep {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if (method.checkExist(driver, cusName)) {
+		if (method.checkExist(driver, LoginInterface.cusName)) {
 
 			System.out.println("SUCCESS");
 		} else {
