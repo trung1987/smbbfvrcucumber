@@ -9,9 +9,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Method {
 
-	public void input(WebDriver driver, String xpath, String input) {
+	public void inputText(WebDriver driver, String xpath, String input) {
 		WebElement inputField = driver.findElement(By.xpath(xpath));
 		inputField.sendKeys(input);
+	}
+	
+	public void openPage(WebDriver driver, String url) {
+		driver.get(url);
 	}
 
 	public void click(WebDriver driver, String xpath) {
@@ -27,8 +31,8 @@ public class Method {
 	}
 
 	public void focusField(WebDriver driver, String xpath) {
-		WebElement clearField = driver.findElement(By.xpath(xpath));
-		new Actions(driver).moveToElement(clearField).perform();
+		WebElement focusField = driver.findElement(By.xpath(xpath));
+		new Actions(driver).moveToElement(focusField).perform();
 	}
 
 	public void clickWhenClickable(WebDriver driver, String xpath) {
