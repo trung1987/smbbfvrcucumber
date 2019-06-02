@@ -104,8 +104,7 @@
 						<!-- </property> -->
 					</properties>
 					<suiteXmlFiles>
-						<suiteXmlFile>dropdown.xml</suiteXmlFile>
-						<suiteXmlFile>quick.xml</suiteXmlFile>
+						<suiteXmlFile>suite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
