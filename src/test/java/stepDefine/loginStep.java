@@ -76,6 +76,7 @@ public class loginStep {
 				parts.add(partsA[j]);
 			}
 		}
+		
 			//in gia tri o vi tri can thiet
 		System.out.println(parts.get(7).toString());
 
