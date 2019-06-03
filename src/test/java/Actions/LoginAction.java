@@ -1,27 +1,36 @@
 package Actions;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 import org.openqa.selenium.WebDriver;
 
 import Interface.LoginInterface;
+import utils.ExcelUtils;
 import utils.Method;
 
 public class LoginAction extends Method {
 	WebDriver driverlocal;
+
 	public LoginAction(WebDriver driver) {
 		driverlocal = driver;
 	}
-	
-	public void enterUserName (String input) {
+
+	public void enterUserName(String input) {
 		inputText(driverlocal, LoginInterface.username, input);
 	}
-	public void enterPass (String input) {
+
+	public void enterPass(String input) {
 		inputText(driverlocal, LoginInterface.password, input);
 	}
-	public void clickLogin () {
+
+	public void clickLogin() {
 		click(driverlocal, LoginInterface.loginBtn);
 	}
-	public void openBrowser () {
+
+	public void openBrowser() {
 		openPage(driverlocal, LoginInterface.pageURL);
 	}
+
 	
 }

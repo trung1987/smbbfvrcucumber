@@ -8,7 +8,7 @@ public class ExcelDataProvider {
 	static ArrayList<String> array = new ArrayList<String>();
 	
 
-	public static ArrayList<String> getData(String excelPath, String sheetName) throws IOException {
+	public ArrayList<String> getData(String excelPath, String sheetName) throws IOException {
 		ExcelUtils excel = new ExcelUtils(excelPath, sheetName);
 		
 		int rowCount = excel.getRowCount();

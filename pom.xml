@@ -93,9 +93,8 @@
 				<configuration>
 					<runOrder>reversealphabetical</runOrder>
 					<includes>
-						<!-- <exclude>**/loginRunner.java</exclude>-->
-						 <exclude>**/testRunner.java</exclude> -->
-						<!--<exclude>**/agreementFrameRunner.java</exclude>-->
+						
+						<exclude>**/testRunner.java</exclude>
 					</includes>
 				</configuration>
 			</plugin>
@@ -241,7 +240,6 @@
 			<artifactId>cucumber-testng</artifactId>
 			<version>1.2.5</version>
 		</dependency>
-
 
 	</dependencies>
 
