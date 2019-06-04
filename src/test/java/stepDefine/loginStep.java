@@ -3,25 +3,21 @@ package stepDefine;
 import java.io.File;
 import java.util.ArrayList;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import Actions.LoginAction;
-<<<<<<< HEAD
 import Interface.LoginInterface;
 import cucumber.api.java.After;
-=======
->>>>>>> branch 'master' of https://bitbucket.org/smbbfvr/cucumber/src/master/
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-<<<<<<< HEAD
 import utils.ExcelDataProvider;
 import utils.Method;
-=======
-import utils.BasedTest;
->>>>>>> branch 'master' of https://bitbucket.org/smbbfvr/cucumber/src/master/
 
-public class loginStep extends BasedTest{
+public class loginStep {
 
+	static WebDriver driver;
 	LoginAction login;
 
 	@Given("^Open Chrome and navigate$")
@@ -29,6 +25,7 @@ public class loginStep extends BasedTest{
 		System.setProperty("webdriver.chrome.driver",
 				"." + File.separator + "libs" + File.separator + "chromedriver.exe");
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		login = new LoginAction(driver);
 		login.openBrowser();
 	}
@@ -48,16 +45,10 @@ public class loginStep extends BasedTest{
 	@Then("^I login success$")
 	public void i_login_success() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-<<<<<<< HEAD
 
 		Method method = new Method();
 		login = new LoginAction(driver);
-=======
-		driver.quit();
-		//Method method = new Method();
->>>>>>> branch 'master' of https://bitbucket.org/smbbfvr/cucumber/src/master/
 
-<<<<<<< HEAD
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -89,21 +80,6 @@ public class loginStep extends BasedTest{
 			//in gia tri o vi tri can thiet
 		System.out.println(parts.get(7).toString());
 
-=======
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		if (method.checkExist(driver, LoginInterface.cusName)) {
-//
-//			System.out.println("SUCCESS");
-//		} else {
-//
-//			System.out.println("FAIL");
-//		}
->>>>>>> branch 'master' of https://bitbucket.org/smbbfvr/cucumber/src/master/
 	}
 
 	@After
