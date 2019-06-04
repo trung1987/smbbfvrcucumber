@@ -15,24 +15,24 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentBDDReporter;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BasedTest {
+public class BasedTest extends AbstractTestNGCucumberTests {
 	public static WebDriver driver;
-    public static ExtentHtmlReporter htmlReporter; //tao file html report , nen de o beforeTest , ko dc de o beforeclass
-    public static ExtentBDDReporter bddReporter;
-    public static ExtentTest test;
-    public static ExtentReports extent;
+//    public static ExtentHtmlReporter htmlReporter; //tao file html report , nen de o beforeTest , ko dc de o beforeclass
+//    public static ExtentBDDReporter bddReporter;
+//    public static ExtentTest test;
+//    public static ExtentReports extent;
     
-	
 	@Parameters({"browser"})
 	@BeforeTest
 	public void openBrowser(String browser) {
 		
 		//khoi tao
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/my_report/Automation.xml"); //khai bao 1 file html report
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter); //save data len html report
+//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/my_report/Automation.xml"); //khai bao 1 file html report
+//		extent = new ExtentReports();
+//		extent.attachReporter(htmlReporter); //save data len html report
 		
 		
 		switch (browser) {
@@ -52,10 +52,10 @@ public class BasedTest {
 		driver.manage().window().maximize();
 	}
 	
-	@AfterClass
-	public void saveReport() {
-		extent.flush();
-	}
+//	@AfterClass
+//	public void saveReport() {
+//		extent.flush();
+//	}
 	
 	@AfterTest
 	public void cleanUp() throws IOException {

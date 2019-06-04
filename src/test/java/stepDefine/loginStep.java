@@ -1,31 +1,22 @@
 package stepDefine;
 
-import java.io.File;
 import java.util.ArrayList;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import Actions.LoginAction;
 import Interface.LoginInterface;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import utils.BasedTest;
 import utils.ExcelDataProvider;
 import utils.Method;
 
-public class loginStep {
+public class loginStep extends BasedTest{
 
-	static WebDriver driver;
 	LoginAction login;
 
 	@Given("^Open Chrome and navigate$")
 	public void open_Chrome_and_navigate() throws Throwable {
-		System.setProperty("webdriver.chrome.driver",
-				"." + File.separator + "libs" + File.separator + "chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		login = new LoginAction(driver);
 		login.openBrowser();
 	}

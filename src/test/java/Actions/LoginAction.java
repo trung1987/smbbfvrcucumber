@@ -1,12 +1,7 @@
 package Actions;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
 import org.openqa.selenium.WebDriver;
-
 import Interface.LoginInterface;
-import utils.ExcelUtils;
 import utils.Method;
 
 public class LoginAction extends Method {
